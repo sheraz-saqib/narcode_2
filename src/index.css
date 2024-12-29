@@ -1,0 +1,82 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+}
+body::-webkit-scrollbar{
+    width: 0;
+}
+body,html{
+    overflow-x: hidden;
+    /* height: 1000vh; */
+}
+.max-width{
+    max-width: 1380px;
+    margin: 0 auto;
+}
+.custom-stroke {
+    -webkit-text-stroke: 1px rgba(184, 184, 184, 0.337); /* Stroke width and color */
+    color: transparent; /* Text fill color */
+    text-stroke: 1px rgba(184, 184, 184, 0.337); /* Fallback for other browsers */
+  }
+
+.testimonialCard::after{
+    position: absolute;
+    content: '';
+bottom: -2rem;
+left: 0;
+width: 3rem;
+height: 2.5rem;
+clip-path: polygon(0 0, 0% 110%, 100% 0);
+}
+.testimonialCardOverlay::after{
+    position: absolute;
+    content: '';
+bottom: -1.9rem;
+left: 0;
+width: 2rem;
+height: 2rem;
+
+z-index: 10;
+clip-path: polygon(0 0, 0% 100%, 100% 0);
+}
+.msgContainer{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 11% 76%, 0 93%, 0 75%, 0% 75%);
+
+
+}
+/* prising card */
+.prcingCardSides{
+    /* clip-path: polygon(0% 8%, 19% 11%, 19% 95%, 0% 99%); */
+    /* clip-path: polygon(0% 0%, 97% 11%, 97% 89%, 0% 100%); */
+    /* clip-path: polygon(0% 0%, 19% 8%, 22% 93%, 0% 100%); */
+    clip-path: polygon(0% 0%, 22% 4%, 22% 96%, 0% 100%);
+    overflow: hidden;
+}
+/* Custom Swiper Styles */
+/* Default styling for all slides */
+.swiper-slide-custom {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0.8; /* Reduced opacity for non-active slides */
+  /* scale: .9; */
+  transform: scale(.9) !important;
+  min-height: 20rem;
+}
+
+/* Styling for the active slide */
+.swiper-slide-active {
+    transform: scale(1.1) !important;
+  opacity: 1; /* Full opacity for the active slide */
+  z-index: 1; /* Ensure it appears above other slides */
+  /* min-height: 24rem; */
+}
+
+/* Optional: Add shadow and rounded edges for visual enhancement */
+.swiper-slide-custom div {
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
