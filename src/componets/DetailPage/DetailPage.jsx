@@ -8,8 +8,8 @@ import WhyChooseUs from './WhyChooseUs/WhyChooseUs'
 import PricingCard from '../PricingCards/PricingCard'
 import ShowPricingCard from '../PricingCards/ShowPricingCard'
 
-const DetailPage = () => {
-    const data = DetailPageData()[0];
+const DetailPage = ({id}) => {
+    const data = DetailPageData()[id];
     const topSection = data.top_section[0];
     const secondSection = data.second_section;
   return (

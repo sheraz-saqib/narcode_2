@@ -5,10 +5,10 @@ const NavConstant = () => {
         { path: "/", label: "Home" },
         { path: "/about", label: "About" },
         { path: "/portfolio", label: "portfolio" },
-        { path: "/products", label: "Products" },
+        // { path: "/products", label: "Products" },
         { path: "/services", label: "Services" },
         { path: "/contact", label: "Contact" },
-        { path: "/blogs", label: "Blogs" },
+        // { path: "/blogs", label: "Blogs" },
       ];
   return Links;
 }

@@ -60,7 +60,7 @@ clip-path: polygon(0 0, 0% 100%, 100% 0);
   opacity: 0.8; /* Reduced opacity for non-active slides */
   /* scale: .9; */
   transform: scale(.9) !important;
-  min-height: 20rem;
+
 }
 
 /* Styling for the active slide */

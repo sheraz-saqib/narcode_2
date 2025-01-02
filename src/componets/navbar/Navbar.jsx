@@ -1,5 +1,4 @@
-
-import React, { useEffect, useRef ,useState} from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import RightArrow from "./widgets/RightArrow";
@@ -8,95 +7,110 @@ import NavConstant from "./NavConstant";
 import { NavLink } from "react-router-dom";
 import Logo from "../Svg/Logo";
 gsap.registerPlugin(ScrollTrigger);
+
 const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const links = NavConstant();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const links = NavConstant();
 
-    const navRef = useRef(null);
-    const menuRef = useRef(null);
+  const navRef = useRef(null);
+  const menuRef = useRef(null);
 
-    const toggleMenu = () => {
-      setIsMenuOpen(!isMenuOpen);
-      if (!isMenuOpen) {
-        expandMenu();
-      } else {
-        collapseMenu();
-      }
-    };
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    if (!isMenuOpen) {
+      expandMenu();
+    } else {
+      collapseMenu();
+    }
+  };
 
-    const expandMenu = () => {
-      const menu = menuRef.current;
+  const expandMenu = () => {
+    const menu = menuRef.current;
 
-      gsap.to(menu, {
-        x: 0,
-        opacity: 1,
-        duration: 0.5,
-        ease: "power1.out",
-      });
-    };
+    gsap.to(menu, {
+      x: 0,
+      opacity: 1,
+      duration: 0.5,
+      ease: "power1.out",
+    });
+  };
 
-    const collapseMenu = () => {
-      const menu = menuRef.current;
+  const collapseMenu = () => {
+    const menu = menuRef.current;
 
-      gsap.to(menu, {
-        x: "-100%",
-        opacity: 0,
-        duration: 0.5,
-        ease: "power1.in",
-      });
-    };
+    gsap.to(menu, {
+      x: "-100%",
+      opacity: 0,
+      duration: 0.5,
+      ease: "power1.in",
+    });
+  };
 
-    useEffect(() => {
-        const navbar = navRef.current;
+  useEffect(() => {
+    const navbar = navRef.current;
+
+    const handleResize = () => {
+      if (window.innerWidth > 1151) {
         gsap.fromTo(
           navbar,
-          { width: "70rem", borderRadius: "999px" },
+          { width: "70rem", borderRadius: "999px" ,marginTop:'1rem' },
           {
-            width: "100%", // Full width on scroll
-            borderRadius: "0px", // Remove border radius on scroll
+            width: "100%",
+            borderRadius: "0px",
             duration: 0.5,
-            marginTop:0,
+            marginTop: 0,
             ease: "power1.out",
             scrollTrigger: {
-              trigger: document.body, // Whole body scroll triggers the animation
-              start: "top top", // Start animation at the top of the page
-              toggleActions: "play reverse play reverse", // Toggle between states
+              trigger: document.body,
+              start: "top top",
+              toggleActions: "play reverse play reverse",
             },
           }
         );
-    }, []);
+      } else {
+        ScrollTrigger.getAll().forEach((st) => st.kill()); // Disable animation for smaller screens
+        gsap.set(navbar, { width: "100%", borderRadius: "0px", marginTop: 0 });
+      }
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      ScrollTrigger.getAll().forEach((st) => st.kill());
+    };
+  }, []);
+
+  const handleLinkClick = () => {
+    if (window.innerWidth <= 1151) {
+      toggleMenu();
+    }
+  };
 
   return (
     <>
       <nav
-      ref={navRef}
-        className="fixed top-0 left-1/2 transform -translate-x-1/2 z-[9] bg-gradient-to-r from-white to-gray-100 rounded-full p-4 w-[70rem] max-[1080px]:w-[90%] mt-[1rem] "
+        ref={navRef}
+        className="fixed top-0 left-1/2 transform -translate-x-1/2 z-[9] bg-gradient-to-r from-white to-gray-100 rounded-full p-4 w-[70rem] max-[1151px]:w-full max-[1151px]:mt-0 max-[1080px]:w-[90%] mt-[1rem] "
       >
         <div className="container mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            {/* <span className="text-[1.8rem] text-gray-800">Akodah</span> */}
-            <div className="w-[9rem] ">
-
-            <Logo/>
+            <div className="w-[9rem]">
+              <Logo />
             </div>
           </div>
 
           {/* Navigation Links (Desktop) */}
           <ul className="max-[1151px]:hidden lg:flex space-x-6 max-[1285px]:space-x-3 text-gray-900 text-[.85rem]">
-            {
-                links.map((item,i)=>{
-                    return <li key={i} className="hover:text-gray-900 transition-colors">
-                            <NavLink
-                    to={item.path}
-                    className="hover:text-gray-700 transition"
-                >
-                    {item.label}
+            {links.map((item, i) => (
+              <li key={i} className="hover:text-gray-900 transition-colors">
+                <NavLink to={item.path} className="hover:text-gray-700 transition">
+                  {item.label}
                 </NavLink>
-                    </li>
-                })
-            }
-
+              </li>
+            ))}
           </ul>
 
           {/* Search and Button */}
@@ -141,43 +155,47 @@ const Navbar = () => {
             </button>
 
             {/* Get A Quote Button */}
-           <div className="max-lg:hidden">
-           <ArrowButton text="Get A Quote"/>
-           </div>
+            <div className="max-lg:hidden">
+              <ArrowButton text="Get A Quote" />
+            </div>
           </div>
         </div>
       </nav>
 
-
+      {/* Mobile Menu */}
       <div
         ref={menuRef}
-        className="fixed top-0 left-0 h-full w-full bg-white p-6 z-[10]  transform -translate-x-full opacity-0"
+        className="fixed top-0 left-0 h-full w-full bg-white p-6 z-[10] transform -translate-x-full opacity-0"
       >
-        <div className="text-right">
+        <div className="text-right flex justify-between">
+        <div className="w-[9rem]">
+              <Logo />
+            </div>
           <button onClick={toggleMenu} className="text-gray-900">
             Close
           </button>
-        </div>
-        <ul className="space-y-6 text-gray-900 text-lg font-medium mt-6">
-          {links.map((item, i) => (
-            <li key={i}>
 
-                <NavLink
-                    to={item.path}
-                    className="hover:text-gray-700 transition"
-                >
-                    {item.label}
-                </NavLink>
+        </div>
+
+        <ul className="space-y-6 text-gray-900 text-lg font-medium mt-[2rem]">
+          {links.map((item, i) => (
+            <li key={i} className="border-b pb-2">
+              <NavLink
+                to={item.path}
+                className="hover:text-gray-700 transition "
+                onClick={handleLinkClick}
+              >
+                {item.label}
+              </NavLink>
             </li>
           ))}
           <li>
-            <button className="bg-black text-white py-2 px-4 rounded-full hover:bg-gray-800 transition duration-300">
+            <button className="bg-black w-full text-white py-2 px-4 rounded-full hover:bg-gray-800 transition duration-300">
               Get A Quote
             </button>
           </li>
         </ul>
       </div>
-
     </>
   );
 };

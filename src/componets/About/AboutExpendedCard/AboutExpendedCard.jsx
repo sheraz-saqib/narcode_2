@@ -21,6 +21,7 @@ const AboutExpendedCard = () => {
       <ExpendedCard
         title="Our Vision"
         text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quia debitis obcaecati doloremque ducimus odio eius. Mollitia dicta, necessitatibus, magnam tempore velit minima ipsam sit accusantium maxime molestiae vel unde!"
+        bgimagePath='./assets/about/vision-1.png'
         isActive={hoveredCard === 1 || hoveredCard === null}
         onHover={() => handleHover(1)}
       />
@@ -29,6 +30,7 @@ const AboutExpendedCard = () => {
       <ExpendedCard
         title="Our Mission"
         text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quia debitis obcaecati doloremque ducimus odio eius. Mollitia dicta, necessitatibus, magnam tempore velit minima ipsam sit accusantium maxime molestiae vel unde!"
+         bgimagePath='./assets/about/vision-2.png'
         isActive={hoveredCard === 2 || hoveredCard === null}
         onHover={() => handleHover(2)}
       />

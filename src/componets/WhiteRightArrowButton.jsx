@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const WhiteRightArrowButton = ({text,className}) => {
+const WhiteRightArrowButton = ({text,className,to ='#'}) => {
   return (
-    <a href="#" className={`flex transition-all duration-500 hover:flex-row-reverse  bg-white space-x-3  py-[.8rem] px-[2rem] rounded-full hover:bg-gray-800  text-[.9rem] items-center max-[900px]:text-[.7rem] max-[751px]:text-[.5rem] ${className}`}>
+    <Link to={to} className={`flex transition-all duration-500   bg-white space-x-3  py-[.8rem] px-[2rem] rounded-full hover:bg-gray-200  text-[.9rem] items-center max-[900px]:text-[.7rem] max-[751px]:text-[.5rem] ${className}`}>
     <span>{text}</span>
     <span>
     <svg className='w-[1.2rem]' viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -11,7 +12,7 @@ const WhiteRightArrowButton = ({text,className}) => {
 </svg>
 
     </span>
-  </a>
+  </Link>
   )
 }
 

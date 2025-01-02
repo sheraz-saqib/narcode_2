@@ -5,7 +5,7 @@ import ContactSection from './ContactSection/ContactSection'
 const Contact = () => {
   return (
     <>
-    <PageMainHeading text="Contant"/>
+    <PageMainHeading text="Contact"/>
     <ContactSection/>
     </>
   )

@@ -12,7 +12,7 @@ const ProductDetialPage = () => {
   return (
     <>
     <PageMainHeading text="Product Detail page"/>
-    <div className=" bg-white mt-[5rem] ">
+    <div className=" bg-white mt-[7rem] ">
     <div className="flex lg:px-6 max-width max-[1053px]:flex-col lg:flex-row items-center justify-between gap-3 ">
       {/* Left Side Content */}
       <LeftSection/>

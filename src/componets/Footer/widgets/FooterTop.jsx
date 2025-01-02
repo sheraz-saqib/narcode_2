@@ -1,5 +1,6 @@
 import React from 'react'
 import WhiteRightArrowButton from "../../WhiteRightArrowButton";
+import ArrowButton from '../../ArrowButton';
 const FooterTop = () => {
   return (
     <div className="lg:flex justify-between items-center">
@@ -21,6 +22,7 @@ const FooterTop = () => {
           className="flex-1 px-4 py-3 placeholder:text-[.8rem] text-[.8rem] placeholder:text-white text-white bg-transparent focus:outline-none "
         />
         <div className="m-[.3rem]">
+
         <WhiteRightArrowButton text={`Subcribe`} className="bg-white text-black"/>
         </div>
         {/* <button className="bg-white  rounded-full text-gray-900 px-6 py-3 font-semibold hover:bg-gray-200 flex items-center space-x-2">

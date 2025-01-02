@@ -38,7 +38,7 @@ const HomeServices = () => {
   ];
 
   return (
-    <section className=" py-16 px-6  bg-[url('assets/landing.jpeg')]  min-h-[93rem] bg-bottom bg-cover bg-no-repeat">
+    <section className=" py-16 px-6  bg-[url('assets/red-landing.png')]  min-h-[93rem] bg-bottom bg-cover bg-no-repeat">
       <div className="max-width px-[2rem] text-center h-full ">
         {/* Section Header */}
         <div className="mb-12">
@@ -63,10 +63,8 @@ const HomeServices = () => {
         </div>
 
         {/* View All Button */}
-        <div className="mt-[5rem]">
-          <button className="flex items-center justify-center w-full">
-          <ArrowButton text="View All"/>
-          </button>
+        <div className="mt-[5rem] flex justify-center">
+        <ArrowButton text="View All"/>
         </div>
       </div>
     </section>

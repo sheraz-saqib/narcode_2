@@ -15,16 +15,323 @@ import PageMainHeading from "../PageMainHeading";
 
     // Dummy Data for Products
     const data = {
-    Logo: Array.from({ length: 19 }, (_, i) => `Logo ${i + 1}`),
-    Stationary: Array.from({ length: 14 }, (_, i) => `Stationary ${i + 1}`),
-    "Book Cover": Array.from({ length: 14 }, (_, i) => `Book Cover ${i + 1}`),
-    Thumbnail: Array.from({ length: 14 }, (_, i) => `Thumbnail ${i + 1}`),
-    "Business Profile": Array.from({ length: 14 }, (_, i) => `Profile ${i + 1}`),
-    "CMS/ WordPress": Array.from({ length: 14 }, (_, i) => `WordPress ${i + 1}`),
-    "Custom Websites": Array.from({ length: 14 }, (_, i) => `Website ${i + 1}`),
-    "Custom Applications": Array.from({ length: 14 }, (_, i) => `App ${i + 1}`),
-    "Woo Commerce": Array.from({ length: 14 }, (_, i) => `Store ${i + 1}`),
-    Shopify: Array.from({ length: 14 }, (_, i) => `Shopify ${i + 1}`),
+    'Logo': [
+        {
+            image: "./assets/portfolio/logo/logo-1.jpg",
+        },
+        {
+            image: "./assets/portfolio/logo/logo-2.jpg",
+        },
+        {
+            image: "./assets/portfolio/logo/logo-3.jpg",
+        },
+        {
+            image: "./assets/portfolio/logo/logo-4.jpg",
+        },
+        {
+            image: "./assets/portfolio/logo/logo-5.jpg",
+        },
+        {
+            image: "./assets/portfolio/logo/logo-6.jpg",
+        },
+        {
+            image: "./assets/portfolio/logo/logo-7.jpg",
+        },
+        {
+            image: "./assets/portfolio/logo/logo-8.jpg",
+        },
+        {
+            image: "./assets/portfolio/logo/logo-10.jpg",
+        },
+        {
+            image: "./assets/portfolio/logo/logo-11.jpg",
+        },
+        {
+            image: "./assets/portfolio/logo/logo-12.jpg",
+        },
+        {
+            image: "./assets/portfolio/logo/logo-13.jpg",
+        },
+        {
+            image: "./assets/portfolio/logo/logo-14.jpg",
+        },
+        {
+            image: "./assets/portfolio/logo/logo-15.jpg",
+        },
+        {
+            image: "./assets/portfolio/logo/logo-16.jpg",
+        },
+        {
+            image: "./assets/portfolio/logo/logo-17.jpg",
+        },
+        {
+            image: "./assets/portfolio/logo/logo-18.jpg",
+        },
+        {
+            image: "./assets/portfolio/logo/logo-19.jpg",
+        },
+    ],
+    'Stationary':  [
+        {
+            image: "./assets/portfolio/portfolio1.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio2.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio3.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio4.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio5.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio6.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio7.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio8.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio9.png",
+        },
+    ],
+    "Book Cover":  [
+        {
+            image: "./assets/portfolio/portfolio1.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio2.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio3.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio4.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio5.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio6.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio7.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio8.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio9.png",
+        },
+    ],
+    'Thumbnail':  [
+        {
+            image: "./assets/portfolio/portfolio1.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio2.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio3.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio4.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio5.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio6.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio7.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio8.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio9.png",
+        },
+    ],
+    "Business Profile":  [
+        {
+            image: "./assets/portfolio/portfolio1.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio2.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio3.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio4.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio5.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio6.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio7.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio8.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio9.png",
+        },
+    ],
+    "CMS/ WordPress": [
+        {
+            image: "./assets/portfolio/portfolio1.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio2.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio3.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio4.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio5.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio6.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio7.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio8.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio9.png",
+        },
+    ],
+    "Custom Websites":  [
+        {
+            image: "./assets/portfolio/portfolio1.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio2.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio3.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio4.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio5.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio6.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio7.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio8.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio9.png",
+        },
+    ],
+    "Custom Applications":  [
+        {
+            image: "./assets/portfolio/portfolio1.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio2.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio3.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio4.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio5.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio6.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio7.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio8.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio9.png",
+        },
+    ],
+    "Woo Commerce":  [
+        {
+            image: "./assets/portfolio/woo-commerce/woocommerce-1.jpg",
+        },
+        {
+            image: "./assets/portfolio/woo-commerce/woocommerce-2.jpg",
+        },
+        {
+            image: "./assets/portfolio/portfolio3.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio4.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio5.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio6.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio7.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio8.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio9.png",
+        },
+    ],
+    'Shopify': [
+        {
+            image: "./assets/portfolio/portfolio1.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio2.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio3.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio4.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio5.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio6.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio7.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio8.png",
+        },
+        {
+            image: "./assets/portfolio/portfolio9.png",
+        },
+    ],
     };
 
     const Portfolio = () => {
@@ -46,7 +353,7 @@ import PageMainHeading from "../PageMainHeading";
     return (
     <>
     <PageMainHeading text="Portfolio"/>
-       <div className="min-h-screen max-width flex flex-col md:flex-row bg-gray-50 mt-[10rem] sm:mt-[5rem]">
+       <div className="min-h-screen max-width flex flex-col md:flex-row bg-gray-50 mt-[10rem] ">
         {/* Sidebar */}
         <aside className="w-full md:w-1/4 bg-transparent p-6">
             <h1 className="lg:text-5xl md:text-4xl sm:text-4xl  font-medium mb-8">Category <span className="font-bold">Portfolio </span><br /> </h1>
@@ -97,9 +404,18 @@ import PageMainHeading from "../PageMainHeading";
             {paginatedData.map((item, index) => (
                 <div
                 key={index}
+                style={{
+                    backgroundImage: `url(${item.image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+
+                    cursor: "pointer",
+                    transition: "background-color 0.3s ease-in-out",
+                }}
                 className="h-[24rem] rounded-lg bg-gray-300 flex items-center justify-center  text-xl font-bold"
                 >
-                {item}
+
                 </div>
             ))}
             </div>

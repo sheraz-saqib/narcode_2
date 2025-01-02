@@ -52,7 +52,7 @@ const ProductDesignServices = () => {
   return (
     <>
       <PageMainHeading text="Product Design Services" />
-      <div className="max-w-7xl mx-auto px-[2rem] max-[880px]:text-[2rem] max-[558px]:text-[1.7rem] max-[387px]:text-[1.4rem] text-[2.8rem]  leading-[2.8rem] max-[387px]:leading-[1.8rem] mt-[2.5rem] max-[494px]:text-center">
+      <div className="max-w-7xl mx-auto px-[2rem] max-[880px]:text-[2rem] max-[558px]:text-[1.7rem] max-[387px]:text-[1.4rem] text-[2.8rem]  leading-[2.8rem] max-[387px]:leading-[1.8rem] mt-[7rem] max-[494px]:text-center">
         <h2 className='font-medium'>
           Smart And Effective
         </h2>

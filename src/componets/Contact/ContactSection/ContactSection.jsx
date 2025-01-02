@@ -12,7 +12,7 @@ import { FaX } from "react-icons/fa6";
 
 const ContactSection = () => {
   return (
-    <div className=" py-16 px-6">
+    <div className=" py-16 px-6 mt-[5rem]">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         {/* Left Section: Contact Information */}
         <div className="space-y-8">

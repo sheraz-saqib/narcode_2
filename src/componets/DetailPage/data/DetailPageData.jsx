@@ -3,12 +3,12 @@ import React from 'react'
 const DetailPageData = () => {
 
   return [
-    // -01
+    // -01 ui-ux
     {
         'main_heading':'Ui Ux Design',
         'top_section':[
             {
-                    'image_url':'./assets/details-page/ui-ux/main.png',
+                'image_url':'./assets/details-page/ui-ux/main.png',
                 'main_heading':'Smart And Effective',
                 'sub_heading':'Web Solution',
             'subtext':'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed, sed do eiusmod tempor incid id ut labore et dolore magna aliqu magna aliquip ex ea commodo consequat ',
@@ -66,20 +66,23 @@ const DetailPageData = () => {
                 'images': [
                     './assets/details-page/ui-ux/slider1.png',
                     './assets/details-page/ui-ux/slider2.png',
-                    './assets/details-page/ui-ux/slider2.png',
-                    './assets/details-page/ui-ux/slider2.png',
+                    './assets/details-page/ui-ux/slider3.png',
+                    './assets/details-page/ui-ux/slider1.png',
                     './assets/details-page/ui-ux/slider2.png',
                     './assets/details-page/ui-ux/slider3.png'
                 ]
             }
         }
     },
-    // -02
+    // -02 logo-design
     {
         'main_heading':'Logo Design',
         'top_section':[
             {
-                'main_heading':'Smart And Effective Logo Deisgn',
+                'image_url':'./assets/details-page/logo-design/main.png',
+                'main_heading':'Smart And Effective',
+                'sub_heading':'Logo Solution',
+                'subtext':'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed, sed do eiusmod tempor incid id ut labore et dolore magna aliqu magna aliquip ex ea commodo consequat ',
             'subtitle':'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed, sed do eiusmod tempor incid id ut labore et dolore magna aliqu magna aliquip ex ea commodo consequat ',
             'description':'Lorem ipsum dolor sit amet, consectet tempor incid id ut labore et dolore magna aliqu magna aliqu fugiat nulla pariatur et',
             'button_text':'Get Started',
@@ -135,17 +138,23 @@ const DetailPageData = () => {
                 'images': [
                     './assets/details-page/logo-design/slider1.png',
                     './assets/details-page/logo-design/slider2.png',
+                    './assets/details-page/logo-design/slider3.png',
+                    './assets/details-page/logo-design/slider1.png',
+                    './assets/details-page/logo-design/slider2.png',
                     './assets/details-page/logo-design/slider3.png'
                 ]
             }
         }
     },
-    // -03
+    // -03 custom website
     {
         'main_heading':'Custom Website',
         'top_section':[
             {
-                'main_heading':'Smart And Effective Custom Website',
+                'image_url':'./assets/details-page/custom-website/main.png',
+                'main_heading':'Smart And Effective',
+                'sub_heading':'Custom Website',
+                'subtext':'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed, sed do eiusmod tempor incid id ut labore et dolore magna aliqu magna aliquip ex ea commodo consequat ',
             'subtitle':'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed, sed do eiusmod tempor incid id ut labore et dolore magna aliqu magna aliquip ex ea commodo consequat ',
             'description':'Lorem ipsum dolor sit amet, consectet tempor incid id ut labore et dolore magna aliqu magna aliqu fugiat nulla pariatur et',
             'button_text':'Get Started',
@@ -201,17 +210,23 @@ const DetailPageData = () => {
                 'images': [
                     './assets/details-page/custom-website/slider1.png',
                     './assets/details-page/custom-website/slider2.png',
-                    './assets/details-page/custom-website/slider3.png'
+                    './assets/details-page/custom-website/slider3.png',
+                    './assets/details-page/custom-website/slider1.png',
+                    './assets/details-page/custom-website/slider2.png',
+                    './assets/details-page/custom-website/slider3.png',
                 ]
             }
         }
     },
-    // -04
+    // -04 custom application
     {
         'main_heading':'Custom Application',
         'top_section':[
             {
-                'main_heading':'Smart And Effective Custom Application',
+                'image_url':'./assets/details-page/custom-application/main.png',
+                'main_heading':'Smart And Effective',
+                'sub_heading':'Custom Application',
+                'subtext':'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed, sed do eiusmod tempor incid id ut labore et dolore magna aliqu magna aliquip ex ea commodo consequat ',
             'subtitle':'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed, sed do eiusmod tempor incid id ut labore et dolore magna aliqu magna aliquip ex ea commodo consequat ',
             'description':'Lorem ipsum dolor sit amet, consectet tempor incid id ut labore et dolore magna aliqu magna aliqu fugiat nulla pariatur et',
             'button_text':'Get Started',
@@ -267,17 +282,23 @@ const DetailPageData = () => {
                 'images': [
                     './assets/details-page/custom-application/slider1.png',
                     './assets/details-page/custom-application/slider2.png',
+                    './assets/details-page/custom-application/slider3.png',
+                    './assets/details-page/custom-application/slider1.png',
+                    './assets/details-page/custom-application/slider2.png',
                     './assets/details-page/custom-application/slider3.png'
                 ]
             }
         }
     },
-    // -05
+    // -05 cms
     {
         'main_heading':'CMS Wordpress',
         'top_section':[
             {
-                'main_heading':'Wordpress Is A Leading  Open-Source CMS Platform',
+                'image_url':'./assets/details-page/cms/main.png',
+                'main_heading':'Wordpress Is A Leading',
+                'sub_heading':'Open-Source CMS Platform',
+                'subtext':'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed, sed do eiusmod tempor incid id ut labore et dolore magna aliqu magna aliquip ex ea commodo consequat ',
             'subtitle':'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed, sed do eiusmod tempor incid id ut labore et dolore magna aliqu magna aliquip ex ea commodo consequat ',
             'description':'Lorem ipsum dolor sit amet, consectet tempor incid id ut labore et dolore magna aliqu magna aliqu fugiat nulla pariatur et',
             'button_text':'Get Started',
@@ -333,7 +354,10 @@ const DetailPageData = () => {
                 'images': [
                     './assets/details-page/cms/slider1.png',
                     './assets/details-page/cms/slider2.png',
-                    './assets/details-page/cms/slider3.png'
+                    './assets/details-page/cms/slider3.png',
+                    './assets/details-page/cms/slider1.png',
+                    './assets/details-page/cms/slider2.png',
+                    './assets/details-page/cms/slider3.png',
                 ]
             }
         }

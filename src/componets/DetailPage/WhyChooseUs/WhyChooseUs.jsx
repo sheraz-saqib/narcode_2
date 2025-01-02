@@ -17,18 +17,11 @@ const WhyChooseUs = ({
     sliders
 }) => {
 
-  const works = [
-    { id: 1, image: "/path/to/image1.png", title: "Work 1" },
-    { id: 2, image: "/path/to/image2.png", title: "Work 2" },
-    { id: 3, image: "/path/to/image3.png", title: "Work 3" },
-    { id: 4, image: "/path/to/image4.png", title: "Work 4" },
-    { id: 5, image: "/path/to/image5.png", title: "Work 5" },
-  ];
 
   return (
-    <div className="mb-[10rem] relative bg-[url('assets/landing.jpeg')] bg-center bg-no-repeat bg-cover pt-[6rem] min-h-[26rem] mt-[8rem]">
+    <div className="mb-[10rem] md:px-[1rem] relative bg-[url('assets/landing.png')] bg-center bg-no-repeat bg-cover pt-[6rem] min-h-[26rem] mt-[8rem]">
       {/* Why Choose Us Section */}
-      <section className="mb-16 max-width flex justify-center items-center flex-col max-md:mx-[1rem]">
+      <section className="my-16 max-width flex justify-center items-center flex-col max-md:mx-[1rem]">
         <SmallBanner text={smallBannerText} className="bg-[#d8e7fc]" />
         <h2 className="text-4xl font-medium text-center my-4">
           {mainHeading}
@@ -41,7 +34,14 @@ const WhyChooseUs = ({
          return(
            <div key={index} style={{
             backgroundImage:`url('${item.bg_image}')`
-            }} className={`rounded-[1rem] bg-cover bg-center h-[17rem] ${index == 0 || index == 5 ? 'col-span-4':'col-span-1'}`}>
+            }} className={`rounded-[1rem] bg-cover bg-center h-[17rem] ${index == 0 || index == 5 ? 'col-span-4 max-[1190px]:col-span-3 max-[1024px]:col-span-2':'col-span-1 max-[1190px]:col-span-3 max-[1024px]:col-span-2'}`}>
+                <div className={`${index == 0 || index == 5 ? 'ml-[2rem] mt-[1.6rem] w-full' : 'hidden'}`}>
+                   <div className="capitalize text-white font-medium">
+                   <h3 className="h-full   text-[1.2rem]">{item.title}</h3>
+                   <h3 className="h-full   text-[1.2rem]">{item.subtitle}</h3>
+                   <p className="text-[.8rem] italic font-thin w-1/2 mt-[2rem]"  >{item.description}</p>
+                   </div>
+                </div>
            </div>
          )
        })}

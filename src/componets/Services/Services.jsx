@@ -90,8 +90,8 @@ const servicess = () => {
 
       return (
      <>
-     <PageMainHeading text={'servicess'}/>
-        <section className=" py-16 px-1   min-h-[63rem] bg-bottom bg-cover bg-no-repeat">
+     <PageMainHeading text={'services'}/>
+        <section className=" py-16 px-1   min-h-[63rem] bg-bottom bg-cover bg-no-repeat mt-[6rem]">
           <div className="max-width max-[682px]:px-[.5rem] px-[2rem] text-center h-full ">
 
             {/* Cards Grid */}

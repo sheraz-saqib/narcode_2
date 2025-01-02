@@ -4,7 +4,7 @@ import SmallBanner from '../../../../SmallBanner'
 const GrowthLeftSection = () => {
   return (
     <div className="lg:w-1/2 w-full mb-8 lg:mb-0 ">
-      <SmallBanner text="Introduction Of Akhodah" className="bg-[#f5e0cb] max-w-[10rem]"/>
+      <SmallBanner text="Akhodah" className="bg-[#f5e0cb] max-w-[17rem]"/>
     <h2 className="text-3xl md:text-5xl font-semibold text-black mb-4 leading-snug mt-[1rem]">
      Performance & Growth Business For Brands
     </h2>

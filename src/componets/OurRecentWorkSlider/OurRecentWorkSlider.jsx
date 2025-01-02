@@ -10,8 +10,8 @@ import "swiper/css/pagination";
 const OurRecentWorkSlider = ({ sliders }) => {
   return (
     <section className="mx-[1rem]">
-      <div className="flex justify-between items-center max-width">
-        <h2 className="text-3xl font-bold text-center mb-6">Our Recent Work</h2>
+      <div className="flex justify-between items-center max-width max-[408px]:flex-col">
+        <h2 className="text-3xl font-bold text-center mb-6 max-[422px]:mb-3 max-[422px]:text-[1.5rem]">Our Recent Work</h2>
         {/* Fixed Navigation Buttons */}
         <div className="swiper-navigation-buttons flex justify-center space-x-4">
           <NavigateButton
@@ -34,6 +34,10 @@ const OurRecentWorkSlider = ({ sliders }) => {
           prevEl: ".swiper-button-prev-custom",
         }}
         breakpoints={{
+            0: {
+                slidesPerView: 1, // For small screens (mobile)
+                spaceBetween: 10,
+              },
           320: {
             slidesPerView: 1, // For small screens (mobile)
             spaceBetween: 10,
@@ -48,12 +52,12 @@ const OurRecentWorkSlider = ({ sliders }) => {
           },
         }}
         modules={[Navigation]}
-        className="max-w-[1920px] mt-[4rem] relative"
+        className="max-w-[1920px] max-[422px]:mt-[1rem] mt-[4rem] relative"
       >
         {sliders.map((item, index) => (
           <SwiperSlide
             key={index}
-            className="swiper-slide-custom relative rounded-[2rem] shadow-lg bg-white flex items-end justify-end transition transform duration-500 my-[4rem]"
+            className="swiper-slide-custom max-[422px]:h-[10rem] min-h-[10rem] relative rounded-[2rem] shadow-lg bg-white flex items-end justify-end transition transform duration-500 my-[4rem]"
           >
             <img
               src={item}
